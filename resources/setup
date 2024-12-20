@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+
+brew install git ansible
+
+if [ ! -d $HOME/personal ]; then
+    mkdir $HOME/personal
+fi
+
+git clone https://github.com/pmd-coutinho/dev $HOME/personal/dev
+
+pushd $HOME/personal/dev/secrets/ssh
+if [ ! -d $HOME/.ssh ]; then
+    mkdir $HOME/.ssh
+fi
+cp -f * $HOME/.ssh
+popd
+pushd $HOME/.ssh
+ansible-vault decrypt config id_ed25519 id_ed25519.pub
+popd
+pushd $HOME/personal/dev
+./run
+popd

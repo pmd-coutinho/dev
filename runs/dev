@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# rust btw
+brew install rust
+
+git config --global user.email "pmd.coutinho@gmail.com"
+git config --global user.name "Pedro Coutinho"
+git config --global init.defaultBranch main
+
+# go??? i need to install this
+# lua btw
+cargo install stylua
+
+# luarocks
+brew install luarocks
+
+luarocks install luacheck

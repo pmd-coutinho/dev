@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+brew install git ripgrep xclip jq tldr python@3.13 fzf
