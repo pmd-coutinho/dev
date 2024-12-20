@@ -1,0 +1,2 @@
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh >> /Users/pedrocoutinho/.zshrc
+echo source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

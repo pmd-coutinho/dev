@@ -2,19 +2,24 @@ export XDG_CONFIG_HOME=$HOME/.config
 VIM="nvim"
 
 PERSONAL=$XDG_CONFIG_HOME/personal
-DEV_ENV=$HOME/dev
 for i in `find -L $PERSONAL`; do
     source $i
 done
 
-## All that sweet sweet fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/starship.toml
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
+
 
 export GOPATH=$HOME/.local/go
 export GIT_EDITOR=$VIM
 export N_PREFIX="$HOME/.local/n"
 export FLYCTL_INSTALL="$HOME/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
+export DEV_ENV="$HOME/personal/dev"
 export DEV_ENV_HOME="$HOME/personal/dev"
 
 dev_env() {

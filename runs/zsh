@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-brew install zsh
+brew install zsh zsh-syntax-highlighting starship zoxide
 hash -r
 sudo chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
