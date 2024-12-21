@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+brew install maccy kapb shottr
+brew install --cask nikitabobko/tap/aerospace
+brew install --cask arc
+brew install --cask azure-data-studio
+brew install --cask notion-calendar
+brew install docker
+brew install --cask fork
+brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask jetbrains-toolbox
+brew install --cask microsoft-azure-storage-explorer
+brew install --cask openvpn-connect
+brew install --cask postman
+brew install --cask obsidian
+brew install --cask raycast
+brew install --cask slack
+brew install --cask forkgram-telegram
+brew install --cask wezterm
+brew install --cask zed
+brew install --cask zen-browser
+brew install exa tree bat ripgrep fd fzf lazygit lazydocker 
