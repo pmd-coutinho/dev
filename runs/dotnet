@@ -2,3 +2,17 @@
 
 brew install dotnet
 brew install --cask dotnet-sdk
+
+git clone https://github.com/Samsung/netcoredbg.git $HOME/personal/netcoredbg
+brew install cmake make
+
+pushd $HOME/personal/netcoredbg
+mkdir build
+popd
+
+pushd $HOME/personal/netcoredbg/build
+CC=clang CXX=clang++ cmake -DCMAKE_INSTALL_PREFIX=$HOME/.local/netcoredbg ..
+make install
+popd
+
+
