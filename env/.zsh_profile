@@ -1,3 +1,9 @@
+addToPathFront() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
 export XDG_CONFIG_HOME=$HOME/.config
 VIM="nvim"
 
@@ -8,6 +14,7 @@ done
 
 export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/starship.toml
 
+addToPathFront /opt/homebrew/bin
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
