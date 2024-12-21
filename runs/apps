@@ -19,4 +19,4 @@ brew install --cask forkgram-telegram
 brew install --cask wezterm
 brew install --cask zed
 brew install --cask zen-browser
-brew install exa tree bat ripgrep fd fzf lazygit lazydocker 
+brew install eza tree bat ripgrep fd fzf lazygit lazydocker 

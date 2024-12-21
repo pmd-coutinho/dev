@@ -67,3 +67,17 @@ addToPathFront $HOME/.local/netcoredbg/
 
 # thanks gt
 alias gt='NODE_OPTIONS="--no-deprecation" gt'
+alias la=tree
+alias cat=bat
+
+# Dirs
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+# Eza
+alias l="eza -l --icons --git -a"
+alias lt="eza --tree --level=2 --long --icons --git"
+alias ltree="eza --tree --level=2  --icons --git"
