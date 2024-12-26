@@ -81,3 +81,15 @@ alias ......="cd ../../../../.."
 alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
 alias ltree="eza --tree --level=2  --icons --git"
+
+function nvims() {
+  items=$(find $HOME/.config -maxdepth 2 -name "init.lua" -type f -execdir sh -c 'pwd | xargs basename' \;)
+  selected=$(printf "%s\n" "${items[@]}" | FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS-} --preview-window 'right:border-left:50%:<40(right:border-left:50%:hidden)' --preview 'lsd -l -A --tree --depth=1 --color=always --blocks=size,name ~/.config/{} | head -200'" fzf )
+  if [[ -z $selected ]]; then
+    return 0
+  elif [[ $selected == "nvim" ]]; then
+    selected=""
+  fi
+  NVIM_APPNAME=$selected nvim "$@"
+}
+alias nvs=nvims
