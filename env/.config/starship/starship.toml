@@ -90,6 +90,12 @@ style_user = "bg:overlay fg:iris"
 
 # Languages
 
+[dotnet]
+style = "bg:overlay fg:pine"
+format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
+disabled = false
+symbol = " "
+
 [c]
 style = "bg:overlay fg:pine"
 format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
