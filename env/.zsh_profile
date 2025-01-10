@@ -100,3 +100,5 @@ function nvims() {
   NVIM_APPNAME=$selected nvim "$@"
 }
 alias nvs=nvims
+
+eval "$(direnv hook zsh)"
